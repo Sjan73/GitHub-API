@@ -1,0 +1,19 @@
+<div class='form-group'>
+	<form ng-submit="search(username)">
+		<h3>GitHub User Search</h3>
+		<input type="search" class='form-control' ng-model="username" placeholder='Enter github username'>
+		<span  ng-click="clearSearch()" class="clear glyphicon glyphicon-remove"></span>
+		<input type="submit" class="btn btn-default btn-submit" value='Search'>
+	</form>
+</div>
+
+<ul ng-show='isVisible'>
+	<li><img ng-src="{{user.avatar_url || '//:0'}}" /></li>
+	<li>Username: {{user.name}}</li>
+	<li>Location: {{user.location}}</li>
+	<li>Company: {{user.company}}</li>
+	<li>Email: {{user.email}}</li>
+	<li>Followers: {{user.followers}}</li>
+	<li>Created at: {{user.created_at | date}}</li>
+	<li><a ng-href="/#!/user/{{user.login}}">Open user repositories</a></li>
+</ul>

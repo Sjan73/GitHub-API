@@ -1,0 +1,33 @@
+<h3>Repositories</h3>
+
+<span>Order:</span>
+<select ng-model="repoSortOrder" class="form-control order_select">
+  <option value="+name">Name</option>
+  <option value="+description">Description</option>
+  <option value="+forks_count">Forks</option>
+  <option value="+watchers_count">Watchers</option>
+</select>
+
+<table class='table table-bordered'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Url</th>
+      <th>Forks</th>
+      <th>Watchers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+      <td>{{repo.name}}</td>
+      <td>{{repo.description}}</td>
+      <td><a href="{{repo.html_url}}" target=_blank>view</a>
+      <td>{{repo.forks_count}}</td>
+      <td>{{repo.watchers_count}}</td>
+      
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-default" href="#/user">Back to search</a>

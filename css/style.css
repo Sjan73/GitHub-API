@@ -1,0 +1,30 @@
+img {
+	height: 120px;
+	border: 1px solid #ccc;
+}
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;	
+}
+.form-group {
+	position: relative;
+}
+.btn {
+	margin-bottom: 10px;
+}
+.btn-submit {
+	margin-top: 10px;
+}
+.clear {
+	position: absolute;
+    right: 10px;
+    top: 45px;
+    cursor: pointer;
+}
+.order_select {
+	margin-bottom: 15px;
+}
